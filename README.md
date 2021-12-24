@@ -1,10 +1,15 @@
 # Monitor42
 New developed moderation discord bot by αrchιshα#5518.
 
-# details
+# Details
 Prefix: `42!`
 
 Commands: Moderation
 
-# invite
+Use `42!help` to get command list.
+
+# Invite
 https://discord.com/oauth2/authorize?client_id=733589280437436478&permissions=8&scope=bot
+
+*Tags:*
+*discord, discord.py*
