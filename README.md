@@ -11,5 +11,5 @@ Use `42!help` to get command list.
 # Invite
 https://discord.com/oauth2/authorize?client_id=733589280437436478&permissions=8&scope=bot
 
-*Tags:*
-*discord, discord.py*
+*Hashtags:*
+*#discord.py #monitor42*
