@@ -1,10 +1,12 @@
 # Monitor42
-New developed moderation discord bot by αrchιshα#5518.
+Newly developed moderation discord bot by αrchιshα#5518.
 
 # Details
 Prefix: `42!`
 
 Commands: Moderation
+
+(pulled codes from iso6.9)
 
 Use `42!help` to get command list.
 
