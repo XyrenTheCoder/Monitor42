@@ -94,7 +94,7 @@ async def helplist(ctx):
     print(f'[log] {ctx.author} requested 42!help.')
 
 @bot.command()
-@commands.cooldown(1, 10, commands.BucketType.user)
+@commands.cooldown(1, 1, commands.BucketType.user)
 @commands.has_permissions(kick_members=True)
 async def kick(ctx, member: discord.Member, *, reason=None):
     await member.kick(reason=reason)
@@ -102,7 +102,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
     print(f'[log] {ctx.author} requested 42!kick.')
 
 @bot.command(pass_context=True, aliases=['purge', 'clear'])
-@commands.cooldown(1, 10, commands.BucketType.user)
+@commands.cooldown(1, 1, commands.BucketType.user)
 @commands.has_permissions(administrator=True)
 async def clean(ctx, limit: int):
     await ctx.channel.purge(limit=limit)
@@ -116,7 +116,7 @@ async def clear_error(ctx,error):
         print(f'[log] {ctx.author} returned an error: {error}.')
 
 @bot.command(aliases=['shutup'])
-@commands.cooldown(1, 10, commands.BucketType.user)
+@commands.cooldown(1, 1, commands.BucketType.user)
 @commands.has_permissions(manage_messages=True)
 async def mute(ctx, member: discord.Member, *, reason=None):
     guild = ctx.guild
@@ -136,7 +136,7 @@ async def mute(ctx, member: discord.Member, *, reason=None):
     print(f'[log] {ctx.author} \'s DM has successfully sent.')
 
 @bot.command()
-@commands.cooldown(1, 10, commands.BucketType.user)
+@commands.cooldown(1, 1, commands.BucketType.user)
 @commands.has_permissions(manage_messages=True)
 async def unmute(ctx, member: discord.Member):
    mutedRole = discord.utils.get(ctx.guild.roles, name="Muted")
@@ -149,7 +149,7 @@ async def unmute(ctx, member: discord.Member):
    print(f'[log] {ctx.author} requested 42!unmute.')
 
 @bot.command()
-@commands.cooldown(1, 10, commands.BucketType.user)
+@commands.cooldown(1, 1, commands.BucketType.user)
 @commands.has_permissions(ban_members = True)
 async def ban(ctx, member : discord.Member, *, reason = None):
     await member.ban(reason = reason)
@@ -157,7 +157,7 @@ async def ban(ctx, member : discord.Member, *, reason = None):
     print(f'[log] {ctx.author} requested 42!ban.')
 
 @bot.command()
-@commands.cooldown(1, 10, commands.BucketType.user)
+@commands.cooldown(1, 1, commands.BucketType.user)
 async def unban(ctx, id: int):
     user = await bot.fetch_user(id)
     await ctx.guild.unban(user)
@@ -172,7 +172,7 @@ async def invite(ctx):
 @commands.cooldown(1, 5, commands.BucketType.user)
 async def ping(ctx):
     await ctx.send(f'Client Latency: {round(bot.latency * 1000)}ms')
-    print(f'[log] {ctx.author} requested ]ping.')
+    print(f'[log] {ctx.author} requested 42!ping.')
 
 # start
 bot.run(token)
