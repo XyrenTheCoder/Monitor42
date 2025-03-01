@@ -13,7 +13,7 @@ intents = discord.Intents(messages=True, members=True, guilds=True)
 # var
 token = "token"
 cid = "client_id"
-owner = "αrchιshα#5518"
+owner = "anuryx."
 oid = "706697300872921088"
 
 # prefix and status setup
